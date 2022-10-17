@@ -34,6 +34,15 @@ export const Container = styled.div`
         background-color:#fff;
         padding: 0.5em ;
         border-radius: 4px; 
+        cursor: pointer;
+
+        &:hover{
+          background-color: #f0f0f0;
+        }
     }
+  }
+
+  .show {
+    background-color: orange;
   }
 `;

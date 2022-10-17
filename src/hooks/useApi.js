@@ -19,7 +19,7 @@ export const useApi = (url) => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [url]);
 
   return { data, error, loading };
 };
