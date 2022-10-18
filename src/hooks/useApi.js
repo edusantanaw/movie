@@ -22,4 +22,24 @@ export const useApi = (url) => {
   }, [url]);
 
   return { data, error, loading };
+
 };
+
+
+export const useApiWithFilter = (url, id, page) => {
+  const [filterMovies, setFilterMovies] = useState([]);
+  useEffect(()=>{
+    api
+      .get(
+        `/discover/movie?api_key=043e103cadfe2f7c14e3ddb1f9b8d861&language=pt-BR&with_genres=${id}&page=${page}`
+      )
+      .then((response) => {
+          setFilterMovies(response.data.results);
+        })
+        .catch((err) => {
+        console.log(err);
+    });
+  }, [url, id, page])
+
+  return {filterMovies}
+}

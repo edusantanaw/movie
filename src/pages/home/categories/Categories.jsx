@@ -13,20 +13,9 @@ export function Categories({ handleFilter }) {
   if (data) {
     genres = data.genres;
   }
-
-  let sumOfIds = "";
-
   const addGenrer = (id) => {
-    !sumOfIds ? (sumOfIds += `${id}`) : (sumOfIds += `,${id}`);
-    handleFilter(sumOfIds);
+    handleFilter(id);
   };
-
-  const handleShow = (e) => {
-    console.log(e)
-    active ? setActive(false) : setActive(true)
-  }
-
-
 
   return (
     <Container>

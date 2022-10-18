@@ -13,7 +13,7 @@ export const Container = styled.section`
         display: flex;
         align-self: center;
         padding:2em;
-        gap: 4em 2em;
+        gap: 5em 2em;
         flex-wrap: wrap;
         padding-bottom: 4em;
     }
